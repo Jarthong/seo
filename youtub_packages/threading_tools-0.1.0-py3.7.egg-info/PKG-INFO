@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: threading-tools
+Version: 0.1.0
+Summary: Datastructures and decorators for threading in Python
+Home-page: https://github.com/mnpatil17/threading-tools/
+Author: Mihir Patil
+Author-email: mnpatil17@gmail.com
+License: BSD 3-clause "New" or "Revised License"
+Description: UNKNOWN
+Keywords: threading multithreading multi-threading
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Provides-Extra: dev
+Provides-Extra: test

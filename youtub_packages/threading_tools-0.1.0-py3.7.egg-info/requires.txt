@@ -1,0 +1,7 @@
+nose
+
+[dev]
+check-manifest
+
+[test]
+coverage
