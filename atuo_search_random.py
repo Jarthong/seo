@@ -22,13 +22,15 @@ while True:
         print('第%s次搜索关键字：' %n, keyword)
         dr.find_element_by_id('kw').send_keys(keyword)
         dr.find_element_by_id('su').click()
+        sleep(3)
     except Exception as message:
         print(message)
     try:
         WebDriverWait(dr, 5, 0.1).until(EC.presence_of_element_located((By.XPATH, '//*[@id="1"]/h3/a'))).click()
         dr.switch_to.window(dr.window_handles[1])
-        sleep(1)
+        sleep(3)
         dr.close()
         dr.switch_to.window(dr.window_handles[0])
+        sleep(3)
     except Exception as message:
         print('-------元素获取超时,进入下一个循环-------,错误信息是：\n', message)
