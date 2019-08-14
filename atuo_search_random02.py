@@ -14,10 +14,13 @@ keyword_twice = [['比特币', 'zbg'], ['btc', 'zbg']]
 
 n = 0
 while True:
+    dr = webdriver.Chrome()
+    # 超时设置
+    dr.set_page_load_timeout(10)
+    dr.set_script_timeout(10)
     n += 1
     # 单次搜索-点击进入官网
     if n % 2 == 0:
-        dr = webdriver.Chrome()
         keyword = random.choice(keyword_list)
         try:
             dr.get(url)
@@ -34,7 +37,7 @@ while True:
                 dr.switch_to.window(dr.window_handles[1])
                 sleep(5)
             except Exception as message:
-                print('-------元素获取超时,进入下一个循环-------,错误信息是：\n', message)
+                print('元素获取超时,进入下一个循环,错误信息是：\n', message)
         else:
             pass
         try:
@@ -45,7 +48,6 @@ while True:
 
     # 二次关联搜索：第一次搜索关键字，然后再关联另一关键字搜索
     else:
-        dr = webdriver.Chrome()
         keyword = random.choice(keyword_twice)
         try:
             dr.get(url)
@@ -64,7 +66,7 @@ while True:
             dr.switch_to.window(dr.window_handles[1])
             sleep(5)
         except Exception as message:
-            print('-------元素获取超时,进入下一个循环-------,错误信息是：\n', message)
+            print('元素获取超时,进入下一个循环,错误信息是：\n', message)
         try:
             dr.delete_all_cookies()
         except Exception as message:
