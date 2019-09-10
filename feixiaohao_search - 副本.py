@@ -8,14 +8,6 @@ import random
 url = 'https://www.feixiaohao.com/exchange/'
 elements = ['coinResult', 'exchangeResult']
 
-# while True:
-#     dr = webdriver.Chrome()
-#     dr.get(url)
-#     element = random.choice(elements)
-#     dr.find_element_by_tag_name('input').send_keys('ZBG')
-#     dr.find_element_by_class_name(element).click()
-#     dr.quit()
-
 n = 0
 while True:
     n += 1
@@ -41,7 +33,7 @@ while True:
             sleep(3)
 
         except Exception as message:
-            print('-------元素获取超时,进入下一个循环-------,错误信息是：\n', message)
+            print('元素获取超时,进入下一个循环,错误信息是：\n', message)
         dr.quit()
         # sleep(5)
     except Exception as message:
